@@ -187,62 +187,27 @@
 		<h2>Soy Bloguero</h2>
 		<section class="posts" >
 
-			
+			{% for p in posts %}
 			<article class="post row" >
 				<figure class="imgpost th small-4 columns">
-					<img src="{{STATIC_URL}}images/python-django.png" alt="">
+					<img src="{{MEDIA_URL}}{{p.image}}" alt="">
 				</figure>
 				<div class="content small-8 columns">
 					<span class="title">
-						<a href="">Python y Django los Dioses de los desarrolladores</a>
+						<a href="">{{p.title}}</a>
 						
 					</span>
 					<p class="resume">
-						Python lo conocia, pero debido a que en mi universidad 
+						{{p.resume}}
 						
 						
 					</p>
-					<a href="" class="plus-icon"><span class="icon-plus-circle"></span></a>
-				</div>
-				
-			</article>
-			<article class="post row" >
-				<figure class="imgpost th small-4 columns">
-					<img src="{{STATIC_URL}}images/fasciana.jpg" alt="">
-				</figure>
-				<div class="content small-8 columns">
-					<span class="title">
-						<a href="">Mi primera visita a pueblo nuevo</a>
-						
-					</span>
-					<p class="resume">
-						Python lo conocia, pero debido a que en mi universidad 
-						no se enseña, nunca me anime 
-					</p>
-					<a href="" class="plus-icon"><span class="icon-plus-circle"></span></a>
+					<a href="post/{{p.slugtitle}}" class="plus-icon"><span class="icon-plus-circle"></span></a>
 				</div>
 				
 			</article>
 			
-			<article class="post row" >
-				<figure class="imgpost th small-4 columns">
-					<img src="{{STATIC_URL}}images/python-django.png" alt="">
-				</figure>
-				<div class="content small-8 columns">
-					<span class="title">
-						<a href="">Python y Django los Dioses de los desarrolladores</a>
-						
-					</span>
-					<p class="resume">
-						Python lo conocia, pero debido a que en mi universidad 
-						no se enseña, nunca me anime a probarlo(error mio), 
-						
-					</p>
-					<a href="" class="plus-icon"><span class="icon-plus-circle"></span></a>
-				</div>
-				
-			</article>
-			
+			{% endfor %}
 			
 			
         

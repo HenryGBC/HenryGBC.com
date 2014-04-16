@@ -114,7 +114,8 @@ footer{background:#333;color:#fff;margin:0 auto}
 .avatar img{width:20%}
 .description .name{text-align:center}
 .posts{padding:2em;}
-.posts .post .imagepost .resume,.posts .post .content .resume{display:block}
+.posts .post .imgpost{width:20%}
+.posts .post .content .resume{display:block;margin-top:1em}
 .actpost{width:90%;}
 .actpost .imagepost{width:50%;margin-top:2em;}
 .actpost .imagepost img{width:90%}
@@ -125,7 +126,11 @@ footer{background:#333;color:#fff;margin:0 auto}
 .email .contact{width:50%}
 .email .formemail{width:50%}
 }@media screen and (min-width:1025px){.blog{padding:2em;}
-.blog .posts .post{font-size:1em;width:28%;margin-left:3em}
+.blog .posts{overflow:hidden;}
+.blog .posts .post{width:50%;}
+.blog .posts .post .imgpost img{width:100%;height:8em}
+.blog .posts .post:nth-child(even){float:right;margin-top:1.5em;margin-left:2em}
+.blog .posts .post:nth-child(odd){float:left;margin-top:1.5em}
 .footer .info{left:40%}
 .all{margin:0 auto;}
 .all .actpost{width:60%;}
