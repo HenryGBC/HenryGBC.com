@@ -1,0 +1,322 @@
+@import "normalize.styl"
+@import "fonts.styl"
+gris_oscuro = #333333
+gris_claro = #818181
+gris_mas_claro = #F0F0F0
+naranja_oscuro = #ff7709
+verde_success = #43ac6a
+
+body
+	font-size 16px
+	font-family: 'Varela Round', sans-serif
+header
+	background gris_oscuro
+	color white
+	margin 0
+figure
+	margin 0
+
+.avatar
+	padding 1em
+	img
+		border-radius 50%
+		display block
+		margin 0 auto
+		width 293px
+footer
+	background gris_oscuro
+	color white
+	margin 0 auto
+.description
+	padding 2em
+	color gris_oscuro
+	.name
+		font-size 1.2em
+		margin 0
+		text-align center
+		width 100%
+	.descripcion
+		margin-top 1em
+
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.left-text
+	text-align left
+
+.social
+	padding 1em
+	a 
+		color white
+		padding .8em
+
+.twitter-icon:hover
+	color #4fd6f8
+.facebook-icon:hover
+	color #5792e3
+.gplus-icon:hover
+	color red
+.linkedin-icon:hover
+	color blue
+.github-icon:hover
+	color gris_claro
+
+.skills
+	background white
+.skills
+	padding 1em
+	h2
+		font-size 2em
+	
+	.skill
+		padding .5em
+		
+
+
+		.skillprogress
+			border 1px solid gris_mas_claro
+			box-shadow 1px 1px 0 0 gris_claro
+			
+			.name
+				font-size 1.2em
+				margin-top 1em
+				background gris_oscuro
+				padding .2em 1em
+				color white
+				position relative
+				top 0
+				left -25px
+
+				&:before
+					content ""
+					border-left 10px solid transparent
+					border-top 7px solid gris_oscuro
+					border-bottom 10px solid transparent
+					position absolute
+					top 29px
+					left 0px
+			.barra
+				margin-top 1em
+.email
+	background gris_claro
+	padding 1.5em
+	.contact
+		background gris_oscuro
+		color white
+		padding 1em
+		text-align center
+		position relative
+		width 100%
+		margin 0 auto
+		&:before 
+			content ""
+			border-left 20px solid transparent
+			border-top 20px solid gris_oscuro
+			border-bottom 20px solid transparent
+			border-right 20px solid transparent
+			position absolute
+			bottom -40px
+			left 42%
+	.formemail
+		padding 1em
+		position relative
+		top 1em
+		.submit
+			background-color verde_success
+			border-color #368a55
+			color white
+			width 5em
+
+.blog
+	background gris_mas_claro
+	padding 1em
+	h2
+		text-align center
+	.posts
+	
+		.post
+			background rgba(255, 255, 255, 0.5)
+			padding 1em	
+			text-align right
+			margin-top 1em
+			position relative
+
+			
+			.resume
+				display none
+			.plus-icon
+				color verde_success
+				position absolute
+				top 100%
+				font-size 1.2em
+				
+
+		
+.goto
+	color white
+	&:hover
+		color white
+.footer
+	height 9em
+	position relative
+	.info
+		position absolute
+		top 3em
+		left 20%
+		font-size 1.1em
+		a
+			color naranja_oscuro
+		
+
+
+//Estilos del post
+
+.body
+	background gris_oscuro
+	padding 1em
+
+
+.actpost
+	background gris_mas_claro
+	padding 2em
+	width 90%
+	margin-top 2em
+	margin-left 1em
+	.titlepost
+		color naranja_oscuro
+		font-size 1.5em
+		
+	.imagepost
+		margin 0 auto
+		margin-top 1em
+		text-align center
+
+		img
+			width 80%
+	.paragraph
+		text-align left
+		padding 1em 0em
+	.share
+		float right
+.allposts
+	position relative
+	.listposts
+		background gris_mas_claro
+		margin-top 1em
+		padding 1em
+		text-align center
+		width 90%
+		position absolute
+		left 0
+		.titlelast
+			font-size 1.2em
+			color naranja_oscuro
+		.articles
+			list-style none
+			text-align left
+	.imglist
+		display none
+@media screen and (min-width:480px)
+	.avatar
+		text-align center
+		img
+			width 20%
+		
+	.description
+		.name
+			text-align center
+	
+	.posts
+		padding 2em
+		.post
+			.imagepost
+			.content
+				.resume
+					display block
+	
+	.actpost
+		width 90%
+
+		.imagepost
+			width 50%
+			margin-top 2em
+			img
+				width 90%
+	
+	.email
+		text-align center
+		.contact
+			width 70%
+		.formemail
+			width 70%
+
+@media screen and (min-width:780px)
+	
+	.email
+		text-align center
+		.contact
+			width 50%
+		.formemail
+			width 50%
+
+@media screen and (min-width:1025px)
+	
+
+	.blog
+		padding 2em
+		.posts
+			.post
+				font-size 1em
+				width 28%
+				margin-left 3em
+			
+	.footer
+		.info
+			left 40%
+	
+	.all
+		margin 0 auto
+
+
+
+		.actpost
+			width 60%
+			.imagepost
+				width 90%
+				img
+					width 80%
+		
+
+		.allposts
+			width 40%
+			position fixed
+			top 2em
+			right 0
+			.listposts
+				width 100%
+
+	.email
+		text-align center
+		.contact
+			width 50%
+		.formemail
+			width 50%
+
+
+@media screen and (min-width:1200px)
+
+	.allposts
+		.listposts
+			.articles
+				margin-top 1em
+		.imglist
+			display inline-block
+			width 10%
+
+	.email
+		text-align center
+		.contact
+			width 40%
+		.formemail
+			width 40%
