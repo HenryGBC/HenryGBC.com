@@ -37,7 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'posts',
-    'emails',
+    'contactos',
+    'usuarios',
+    'django_summernote',
 
 
 )

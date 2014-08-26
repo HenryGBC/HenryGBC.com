@@ -1,0 +1,292 @@
+@import "fonts.styl"
+gris_oscuro = #333333
+gris_claro = #818181
+gris_mas_claro = #F0F0F0
+naranja_oscuro = #ff7709
+verde_success = #43ac6a
+
+body
+	font-size 16px
+	font-family: 'montserratregular', sans-serif
+	
+header
+	font-size 1.5em
+	position fixed
+	width 100%
+	background #333333
+	padding 1.5em
+	top 0
+	opacity 0.95
+	z-index 2
+pre
+	background gris_mas_claro
+.name
+	position absolute
+	color white
+	left 15%
+.blue
+	color blue
+.red
+	color red
+.black
+	color black
+
+.bio
+	background gris_mas_claro
+	padding 5em 0em
+	height 22em
+	margin 0 auto
+	position relative
+.desBio
+	h2
+		background black
+		color white
+		text-align center
+	h3
+		background black
+		color white
+		width 80%
+		text-align center
+		margin-top 1em
+	h4
+		background black
+		color white
+		width 70%
+		text-align center
+		margin-top 1em
+.avatar
+	position absolute
+	right 5em
+	margin 0 auto
+	img
+		width 20em
+		height auto
+
+.social
+	position absolute
+	left 63%
+	a
+		padding 0.5em
+		color white
+.socialBio
+	position relative
+	top 3em
+	a
+		padding 0.5em
+.skill
+	margin-bottom 5em
+	padding 1em
+	background #fbfbfb
+	h2
+		text-align center
+		background black
+		color white
+		padding 0em 1em
+		width 30%
+		margin 0 auto
+.is-checked
+	background gris_oscuros
+.button-group
+	text-align center
+.skillContainer
+	margin 0 auto
+	text-align center
+
+
+.skill-item
+	border 1px solid gris_claro
+	display inline-block
+	padding 0.1em 0.5em
+	margin-top 0.5em
+
+.skillname
+	display inline-block
+	border-right 1px solid gris_claro
+	padding 0em 1em
+.por
+	display inline-block
+	padding 0em 1em
+
+
+.blog
+	h2
+		text-align center
+		background black
+		color white
+		padding 0em 1em
+		width 30%
+		margin 0 auto
+		margin-bottom 1em
+.postContainer
+	width 100%
+	margin 0 auto
+.post
+	margin-bottom 3em
+	width 33%
+.postTitle
+	font-weight bold
+	color gris_oscuro
+	border-bottom 1px solid gris_claro
+.imgPost
+	width 100%
+	margin 0
+	height auto
+	img
+		width 100%
+		height 250px
+.date
+	span
+		color gris_claro
+		line-height 1.7
+	p
+		display inline-block
+		float right
+		margin 0 auto
+		color gris_claro
+
+/*****************Estilos del post ***********************/
+.articulo
+	margin-top 4.5em
+.headerArticle
+	width 100%
+	background: rgba(0, 0, 0, 0.7);
+	.imgArt
+		width 50%
+		margin 0 auto
+		position relative
+.content
+	width 70%
+	margin 0 auto
+.title
+	text-align center
+	h1
+		color black
+		margin 0 auto
+		font-weight bold
+.resume
+	border-bottom 1px solid gris_claro
+	margin-top 1em
+	p
+		font-weight bold
+		font-size 1.2em
+.paragraph
+	margin-top 2em
+	margin-bottom 2em
+	border-bottom 1px solid gris_claro
+
+.share
+	margin-top 1em
+	display inline-block
+	div
+		display inline-block
+
+.shareFace
+	width 20%
+
+.blueFace
+	background #3b5999
+.redGPlus
+	background #de4b39
+
+.blueTw
+	background #60a9de
+.user
+	margin-top 3em
+.avatarTw
+	width 15%
+	display inline-block
+.bioTw
+	display inline-block
+	width 70%
+.colorBlueTw
+	color #60a9de
+.fbComments
+	width 100%
+
+@media screen and (max-width:1000px)
+
+	.post
+		width 40%
+		margin-left 3em
+
+@media screen and (max-width:800px)
+
+	.name
+		left 0
+	.social
+		left 50%
+
+	.desBio
+		h2
+			font-size 1.5em
+		h3
+		h4	
+			width 100%
+
+@media screen and (max-width:720px)
+	.post
+		width 80%
+		margin-left 10%
+
+@media screen and (max-width:676px)
+
+	.share
+		div
+			display block
+			margin-top 3em
+	
+@media screen and (max-width:600px)
+	
+	.social
+		left 40%
+
+
+@media screen and (max-width:500px)
+
+	.name
+		display none
+
+	.social
+		left 10%
+
+	.avatar
+		width 50%
+		right 0em
+	.post
+		width 80%
+		margin-left 10%
+	.content
+		width 100%
+	.headerArticle
+	
+		.imgArt
+			width 90%
+
+@media screen and (max-width:400px)
+	.desBio
+		h2
+			font-size 1.3em
+		h3
+			font-size 1em
+		h4
+			font-size 1em
+
+@media screen and (max-width:360px)
+	
+	.bio
+		height 15em
+	.social
+		left 5%
+	.socialBio
+		top 0
+
+	.desBio
+		h2
+			font-size 1.1em
+		h3
+			font-size 0.9em
+		h4
+			font-size 0.8em
+	.post
+		width 100%
+		margin-left 0

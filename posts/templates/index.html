@@ -5,34 +5,19 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Henry Bravo</title>
 	<link rel="stylesheet" href="{{STATIC_URL}}foundation/css/foundation.css" />
-	<link rel="stylesheet" href="{{STATIC_URL}}css/estilos.css">
-    <script src="{{STATIC_URL}}foundation/js/vendor/modernizr.js"></script>
+	<link rel="stylesheet" href="{{STATIC_URL}}css/styles.css">
+    <script src="{{STATIC_URL}}{{STATIC_URL}}foundation/js/vendor/modernizr.js"></script>
+
     
-    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+   <!-- <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>-->
 </head>
 <body>
 <header>
-	<div class="bio" id="social">
-		<figure class="avatar">
-			<img src="{{STATIC_URL}}images/avatar2.jpg" alt="Henry Bravo" class="round"/>
-		</figure>
-		<div class="description panel center-text center-block "  >
-			<span class="name">
-				Henry G Bravo C
-			</span>
-			
-			<div class="descripcion">
-			<span class="carrer">
-				<p  class="center-block">Ingeniero Informatico / Web-Developer</p>
-			</span>
-			<span class="me">
-				<p class="center-block">Backend pero sin abandonar el Frontend.
-					Dispuesto a darte soluciones en la web.</p>
-			</span>
-			</div>
-		</div>
-		<div class="social center-text" >
-		
+        
+		<a href="" class="name">HenryGBC</a>
+		<div class="social" >
+		    
 			<a href="https://twitter.com/HenryGBC" class="twitter-icon">
 				<span class="icon-twitter "></span>
 			</a>
@@ -51,195 +36,178 @@
 				<span class="icon-envelope-o"></span>
 			</a>
 		</div>
-	</div>
+
 </header>
-	<section class="skills center-text">
-		<h2 >Soy programador</h2>
-		<section class="skill row ">
-			<figure class="skillimg small-12 medium-3 columns">
-				<img src="{{STATIC_URL}}images/html5.png" alt="" width="50" height="50">
-
-				
-			</figure>
-			<article class="skillprogress small-12 medium-9 columns left-text">
-				<span class="name">HTML5</span>
-				<div class="progress small-12 success radius barra">
-					<span class="meter " style="width: 90%">
-						
-					</span>
-				</div>
-			</article>
-
-		</section>
-		<section class="skill row">
-			<figure class="skillimg small-12 medium-3 columns">
-				<img src="{{STATIC_URL}}images/css3.png" alt="" width="50" height="50">
-
-				
-			</figure>
-			<article class="skillprogress small-12 medium-9 columns left-text">
-				<span class="name">CSS3</span>
-				<div class="progress small-12 primary radius barra">
-					<span class="meter " style="width: 60%">
-						
-					</span>
-				</div>
-			</article>
+<section class="bio">
+	<div class="row">
+	<div class="small-6 medium-6 large-6 columns desBio">
+		<h2>Web Developer</h2>
+		<h3>Backend and Frontend</h3>
+		<h4>Computer Engineer</h4>
+		<div class="socialBio" >
+		    <div class="cv"><a href="cv.pdf" target="_blank">Descarga mi CV</a></div>
 			
-		</section>
-		<section class="skill row">
-			<figure class="skillimg small-12 medium-3 columns">
-				<img src="{{STATIC_URL}}images/js.png" alt="" width="50" height="50">
+		</div>
+	</div>
+	<figure class="small-4 medium-4 large-4 columns avatar">
+		<img src="{{STATIC_URL}}images/yo.JPG" alt="">
+	</figure>
+	</div>
+</section>
 
-				
-			</figure>
-			<article class="skillprogress small-12 medium-9 columns left-text">
-				<span class="name">Javascript</span>
-				<div class="progress small-12 alert radius barra">
-					<span class="meter " style="width: 40%">
-						
-					</span>
-				</div>
-			</article>
-			
-		</section>
-		<section class="skill row">
-			<figure class="skillimg small-12 medium-3 columns">
-				<img src="{{STATIC_URL}}images/python.png" alt="" width="50" height="50">
+	<section class="skill">
 
-				
-			</figure>
-			<article class="skillprogress small-12 medium-9 columns left-text">
-				<span class="name">Python</span>
-				<div class="progress small-12 success radius barra">
-					<span class="meter " style="width: 70%">
-						
-					</span>
-				</div>
-			</article>
-			
-		</section>
-		<section class="skill row">
-			<figure class="skillimg small-12 medium-3 columns">
-				<img src="{{STATIC_URL}}images/django.png" alt="" width="50" height="50">
+		<h2 >Skills</h2>
+		<div id="filters" class="button-group">  
 
-				
-			</figure>
-			<article class="skillprogress small-12 medium-9 columns left-text">
-				<span class="name">Django</span>
-				<div class="progress small-12 success radius barra">
-					<span class="meter " style="width: 70%">
-						
-					</span>
-				</div>
-			</article>
-			
-		</section>
-		<section class="skill row">
-			<figure class="skillimg small-12 medium-3 columns">
-				<img src="{{STATIC_URL}}images/php.png" alt="" width="50" height="50">
-
-				
-			</figure>
-			<article class="skillprogress small-12 medium-9 columns left-text">
-				<span class="name">PHP</span>
-				<div class="progress small-12 primary radius barra">
-					<span class="meter " style="width: 60%">
-						
-					</span>
-				</div>
-			</article>
-			
-		</section>
-	
-
+		  <button class="button is-checked" data-filter="*">show all</button>
+		  <button class="button" data-filter=".frontend">Frontend</button>
+		  <button class="button" data-filter=".backend">Backend</button>
+		  <button class="button" data-filter=".mobile">Mobile</button>
+		  <button class="button" data-filter=".others">Others</button>
+		 
+		</div>
+	<div class="row">
+	<div class="skillContainer ">
 		
-	</section>
-
-	<section class="email">
-		<div class="contact">
-			<span>Dame tu Email y me pondré en contacto contigo</span>
+		<div class="skill-item small-12 medium-6 large-4 columns frontend" data-category="frontend"  >
+		    <h4 class="skillname"><a href="">JavaScript</a></h4>
+		    <div class="por"><span>80%</span></div>
+		  </div>
+		  <div class="skill-item small-12 medium-6 large-4 columns frontend" data-category="frontend"  >
+		    <h4 class="skillname"><a href="">HTML5</a></h4>
+		    <div class="por"><span>80%</span></div>
+		  </div>
+		  <div class="skill-item small-12 medium-6 large-4 columns frontend " data-category="frontend"  >
+		    <h4 class="skillname"><a href="">Angular Js</a></h4>
+		    <div class="por"><span>80%</span></div>
+		  </div>
+		   <div class="skill-item small-12 medium-6 large-4 columns frontend" data-category="frontend"  >
+		    <h4 class="skillname"><a href="">Backbone Js</a></h4>
+		    <div class="por"><span>80%</span></div>
+		  </div>
+		  <div class="skill-item small-12 medium-6 large-4 columns backend " data-category="backend" >
+		    <h4 class="skillname"><a href="">Python</a></h4>
+			<div class="por"><span>80%</span></div>
+		  </div>
+		   <div class="skill-item small-12 medium-6 large-4 columns backend" data-category="backend" >
+		    <h4 class="skillname"><a href="">PHP</a></h4>
+			<div class="por"><span>80%</span></div>
+		  </div>
+		  <div class="skill-item small-12 medium-6 large-4 columns backend" data-category="backend" >
+		    <h4 class="skillname"><a href="">Django</a></h4>
+			<div class="por"><span>80%</span></div>
+		  </div>
+		  <div class="skill-item small-12 medium-6 large-4 columns backend" data-category="backend" >
+		    <h4 class="skillname"><a href="">Java</a></h4>
+			<div class="por"><span>80%</span></div>
+		  </div>
+		   <div class="skill-item small-12 medium-6 large-4 columns mobile" data-category="mobile" >
+		    <h4 class="skillname"><a href="">Android</a></h4>
+			<div class="por"><span>80%</span></div>
+		  </div>
 		</div>
 		
-		<div class="row formemail">
-				<form action="">
-				    <div class="small-12 medium-12 large-12 columns">
-				      <div class="row collapse">
-				        <div class="small-10 columns">
-				          <input type="email" placeholder="example@gmail.com" id="email_input">
-				        </div>
-				        <div class="small-2 columns">
-				         
-				        <input type="submit" class="postfix submit" value="Enviar" id="enviar">
-				        </div>
-				      </div>
-				    </div>
-				</form>
-		</div>
-		<div data-alert class="alert-box success radius " style ="width: 30%; margin: 0 auto; font-size: 18px;" id="alert">
-		  Gracias, en 5 minutos me pondré en contacto contigo.
-		  <a href="#" class="close"  id="close">&times;</a>
-		</div>
-			
+	</div>
+		
+
 	</section>
+		
+
+
 
 	<section class="blog">
-		<h2>Soy Bloguero</h2>
-		<section class="posts" >
-
-			{% for p in posts %}
-			<article class="post row" >
-				<figure class="imgpost th small-4 columns">
-					<img src="{{MEDIA_URL}}{{p.image}}" alt="">
-				</figure>
-				<div class="content small-8 columns">
-					<span class="title">
-						<a href="">{{p.title}}</a>
-						
-					</span>
-					<p class="resume">
-						{{p.resume}}
-						
-						
-					</p>
-					<a href="post/{{p.slugtitle}}" class="plus-icon"><span class="icon-plus-circle"></span></a>
-				</div>
-				
-			</article>
-			
-			{% endfor %}
-			
-			
-        
-
+		
+			<h2>Posts</h2>
+        	<div class="row">
+        		<div class="postContainer">
+        		{% for p in posts %}
+        		<article class="post small-12 medium-6 large-4 columns">
+        			<a href="post/{{p.slugUrl}}">
+        			<figure class="imgPost">
+        				<img src="{{MEDIA_URL}}{{p.imageIndex}}" alt="">
+        			</figure>
+        			<div class="postDescription">
+	        			<h3 class="postTitle">{{p.title}}'</h3>
+	        			<div class="date">
+	        			<span>Por </span><a href="">@{{p.usuario.username}}</a>
+	        			<p>{{p.fecha}}</p>
+	        			</div>
+        			</div>
+        			</a>
+        		</article>
+        		{% endfor %}
+        		
+        	</div>
+			</div>
 			
 		</section>
 
+     <section class="contacto">
+     	<form action="">
+     		
 
-		<!--Python, ¿El mejor lenguaje para los programadores?
-		 -->
+     		<div class="row">
+     			<fieldset>
+   			 <legend>CONTACTAME</legend>
+     			<div class="medium-6 large-6 columns">
+     				 <label>Nombre
+				        <input type="text" placeholder="Nombre" />
+				      </label>
+     			</div>
+     			<div class="medium-6 large-6 columns">
+     				 <label>Email
+				        <input type="text" placeholder="Email" />
+				      </label>
+     			</div>
+     			<div class="large-12 columns">
+     				 <label>Mensaje
+				        <textarea placeholder="Escriba aqui su mensaje..." rows="4"></textarea>
+				      </label>
+     			</div>
+  				<div class="large-6 columns">
+  					<a href="" class="button">Enviar</a>
+  				</div>
 
-		<!-- pentaquiniela.com
-		 -->
+     		</fieldset>	
+     		</div>
 		
-		<!-- 	Mi primera visita a Pueblo Nuevo
-		. -->
+
+     	</form>
+     </section>
+		
 	</section>
 	<footer>
+		
+	</footer>
+	<!--<footer>
 		<section class="footer">
 			<div class="info">
 				<span class="myname">
 					&copy; 2014 Henry Bravo
 				</span>
 				<a href="">@HenryGBC</a>
+				<a href="" class="sourcecode"><span class="icon-github-alt"></span></a>
 			</div>
 		</section>
-	</footer>
+	</footer>-->
 	<script src="{{STATIC_URL}}foundation/js/vendor/jquery.js"></script>
     <script src="{{STATIC_URL}}foundation/js/foundation.min.js"></script>
+    <script src="{{STATIC_URL}}js/isotope.pkgd.js"></script>
+    <script src="{{STATIC_URL}}js/masonry.pkgd.min.js"></script>
     <script src="{{STATIC_URL}}js/main.js"></script>
     <script>
       $(document).foundation();
     </script>
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-50130727-1', 'henrygbc.github.io');
+	  ga('send', 'pageview');
+
+	</script>
 </body>
 </html>

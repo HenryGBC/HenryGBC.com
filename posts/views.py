@@ -9,25 +9,9 @@ def home(request):
 	template = "index.html"
 	return render(request,template,locals())
 
-def showpost(request, slugTitle):
-	post = get_object_or_404(Post, slugtitle = slugTitle)
+def showpost(request, slugUrl):
+	post = get_object_or_404(Post, slugUrl = slugUrl)
 	posts = Post.objects.all()
 	template = "post.html"
 	return render(request,template,locals())
 
-def savePost(request):
-
-	if request.POST:
-		form = savePostForm(request.POST, request.FILES)
-		print "Primer if"
-		if form.is_valid():
-			form.save()
-			print "Segundo if si guardo"
-			return HttpResponseRedirect("/")
-		else:
-			form = savePostForm()
-			print "no guardo"
-
-	template = "savepost.html"
-
-	return render_to_response(template,context_instance=RequestContext(request,locals()) )

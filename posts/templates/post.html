@@ -1,65 +1,139 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>{{post.title}}</title>
 	<link rel="stylesheet" href="{{STATIC_URL}}foundation/css/foundation.css" />
-	<link rel="stylesheet" href="{{STATIC_URL}}css/estilos.css">
+	<link rel="stylesheet" href="{{STATIC_URL}}css/styles.css">
     <script src="{{STATIC_URL}}foundation/js/vendor/modernizr.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="{{STATIC_URL}}css/prettify.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="{{STATIC_URL}}js/prettify/prettify.js"></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/prettify/run_prettify.js"></script>
+
+    
+   <!-- <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>-->
 </head>
-<body class="body">
-	<section class="all row">
-		<section class="actpost center-text small-12 large-6 columns">
-			<span class="titlepost">
-				{{post.title}}
-			</span>
-			<figure class="imagepost th">
-				<img src="{{MEDIA_URL}}{{post.image}}" alt="" >
+<body onload="prettyPrint()">
+	<header class="headerPost">
+        
+		<a href="/" class="name">HenryGBC</a>
+		<div class="social" >
+		    
+			<a href="https://twitter.com/HenryGBC" class="twitter-icon">
+				<span class="icon-twitter "></span>
+			</a>
+			<a href="https://www.facebook.com/henry.bravo.1420" class="facebook-icon">
+				<span class="icon-facebook "></span>
+			</a>
+			<a href="https://plus.google.com/u/0/+HenryBravo/posts" class="gplus-icon">
+				<span class="icon-google-plus "></span>
+			<a href="http://www.linkedin.com/pub/henry-gabriel-bravo-casanova/83/155/b93" class="linkedin-icon">
+				<span class="icon-linkedin "></span>
+			</a>
+			<a href="https://github.com/HenryGBC" class="github-icon">
+				<span class="icon-github "></span>
+			</a>
+			<a href="http://hbravo_89@hotmail.com" class="mail-icon">
+				<span class="icon-envelope-o"></span>
+			</a>
+		</div>
+
+</header>
+	<section class="articulo">
+		<div class="headerArticle">
+			<figure class="imgArt">
+				<img src="{{STATIC_URL}}images/django.jpg" alt="">
+				 
 			</figure>
+		</div>
+		<div class="content">
+			<div class="title">
+				<h1>{{post.title}}</h1>
+			</div>
+			<div class="resume">
+				<p>{{post.resume}}</p>
+			</div>
 			<div class="paragraph">
-				{{post.paragraph | safe }}
-			</div>
-			<div class="share">
-				<a href="">
-				Share
-				<span class="icon-share"></span>
-				</a>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://henrygbc.github.io/post/{{post.slugtitle}}" data-via="HenryGBC">Tweet</a>
-			
-			
-			</div>
-		</section>
-		<section class="allposts small-12 large-6 columns">
+					
+				{{post.paragraph | safe }}		
 
-			<ul class="listposts">
-			<span class="titlelast">Ultimos posts</span>
-				{% for p in posts %}
-				<li class="articles" >
-					<figure class="imglist">
-						<img src="{{MEDIA_URL}}{{p.image}}" alt="">
-					</figure> 
-					<a href="{{p.slugtitle}}">{{p.title}}
-					<span class="icon-newtab"></span>
-					</a>
-				</li>
-				{% endfor %}
-			</ul>
+			</div>
+	    <div class="share">
+				<div class="row">
+				<div class="large-3 columns">
+					<div class="fb-share-button" data-layout="box_count" data-href="http://localhost:8888/post/{{p.slugUrl}}"></div>
+				</div>
+					<div class="large-3 columns">
+					<a href="http://localhost:8888/post/{{p.slugUrl}}" class="twitter-share-button" data-lang="es" data-size="medium">Tweet</a>
+					</div>
+					<div class="large-3 columns">
+					<div class="g-plusone" data-annotation="inline" data-width="100"  data-href="http://localhost:8888/post/{{p.slugUrl}}"></div>
+					</div>
+				</div>
+		</div>
+		<div class="user">
+			<h4><b>Por:</b></h4>
+			<figure class=" th avatarTw">
+				<img src="{{MEDIA_URL}}{{post.usuario.avatar}}" alt="">
+			</figure>
+			<div class="bioTw">
+				<a href="" class="userTw"><span class="icon-twitter colorBlueTw"></span> &nbsp; @{{post.usuario.username}}</a>
+				<p>{{post.usuario.bio}}</p>
+			</div>
+		</div>
+		  <div id="disqus_thread"></div>
+		    <script type="text/javascript">
+		        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		        var disqus_shortname = 'henrygbcme'; // required: replace example with your forum shortname
 
-		</section>
+		        /* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+	           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	       })();
+		    </script>
+		    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		    
+		</div>
+		
 	</section>
-	<script src="{{STATIC_URL}}foundation/js/vendor/jquery.js"></script>
+	
+    <script src="{{STATIC_URL}}foundation/js/vendor/jquery.js"></script>
     <script src="{{STATIC_URL}}foundation/js/foundation.min.js"></script>
-    <script src="{{STATIC_URL}}js/main.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
-    <script>
+    <script src="{{STATIC_URL}}js/isotope.pkgd.js"></script>
+    <script src="{{STATIC_URL}}js/masonry.pkgd.min.js"></script>
+	<script src="{{STATIC_URL}}js/main.js"></script>
+	<script>
       $(document).foundation();
     </script>
-	<!--Script de witter-->
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'henrygbcme'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<script src="https://apis.google.com/js/platform.js" async defer>
+	  {lang: 'es'}
 	</script>
-	
 
 </body>
 </html>
