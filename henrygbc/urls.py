@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^summernote/', include('django_summernote.urls')),
 	url(r'^$', 'posts.views.home', name='home'),
 	url(r'^post/([^/]+)$', 'posts.views.showpost', name ='showpost'),
+	url(r'^contact/', 'contactos.views.contacto', name ='contacto'),
 	
 
 )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

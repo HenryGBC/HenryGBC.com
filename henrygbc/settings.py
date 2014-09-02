@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,7 +73,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -91,3 +92,13 @@ USE_TZ = True
 #STATICFILES_DIRS = '/home/henrygbc/HenryGBC.com/henrygbc/static/'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
+)
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'HenryGBC Admin'
+}
+

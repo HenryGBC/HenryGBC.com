@@ -1,28 +1,28 @@
 $(function(){
 
 	$( "pre" ).addClass( "prettyprint" );
-	 $('#alert').hide()
-	 $('#enviar').on('click', function(event){
+	 
+
+	/***********Contactame**************/
+	$('#send').on('click', function(event){
 			event.preventDefault();
 	 		
-	 		var email = $('#email_input').val();
+	 		var name = $('#nameInput').val();
+	 		var email = $('#emailInput').val();
+	 		var message = $('#messageText').val();
 
+	 	
 	 		$.ajax({
 
-                data : {'email': email},
-                url : 'email/',
+                data : {'name': name,'email': email, 'message': message},
+                url : 'contact/',
                 type : 'post',
 
              });
-	 		$('#email_input').val(' ');
-	 		$('#alert').fadeIn()
+	 		
 	 });
 
-	 $('#close').on('click', function(event){
-			$('#alert').fadeOut()
-	 });
-
-
+	
 /******************Isotope****************/
 
  var $container = $('.skillContainer').isotope({

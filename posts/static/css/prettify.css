@@ -1,1 +1,62 @@
-.pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+/* Doxy pretty-printing styles. Used with prettify.js.  */
+
+pre .str, code .str { color: #99cc99; } /* string  - eggyolk gold */
+pre .kwd, code .kwd { color: #cc99cc; } /* keyword - light slate blue */
+pre .com, code .com { color: #999999; font-style: italic; } /* comment - green */
+pre .typ, code .typ { color: #6699cc; } /* type - turq green */
+pre .lit, code .lit { color: #f99157; } /* literal - cherry red */
+pre .pun, code .pun { color: #cccccc;  } /* punctuation - lemon chiffon4  */
+pre .pln, code .pln { color: #cccccc; } /* plaintext - white */
+pre .tag, code .tag { color: #f2777a; } /* html/xml tag  (bluey)  */
+pre .htm, code .htm { color: #dda0dd; } /* html tag  light purply*/
+pre .xsl, code .xsl { color: #d0a0d0; } /* xslt tag  light purply*/
+pre .atn, code .atn { color: #f99157; font-weight: normal;} /* html/xml attribute name  - lt turquoise */
+pre .atv, code .atv { color: #66cccc; } /* html/xml attribute value - rosy brown2 */
+pre .dec, code .dec { color: #f99157; } /* decimal - blue */
+
+a {
+  text-decoration: none;
+}
+pre.prettyprint, code.prettyprint {
+  font-family: 'Oswald', sans-serif;
+  background-color: #2d2d2d;
+  /*-moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;*/
+}  /*  background is black (well, just a tad less dark )  */
+
+pre.prettyprint {
+  width: 100%;
+  margin: 1em auto;
+  padding: 1em;
+  white-space: pre-wrap;
+}
+
+pre.prettyprint a, code.prettyprint a {
+   text-decoration:none;
+}
+/* Specify class=linenums on a pre to get line numbering; line numbers themselves are the same color as punctuation */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #8B8970; } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+/* print is mostly unchanged from default at present  */
+@media print {
+  pre.prettyprint, code.prettyprint { background-color: #fff;  }
+  pre .str, code .str { color: #006600; }
+  pre .kwd, code .kwd { color: #006; font-weight: bold; }
+  pre .com, code .com { color: #600; font-style: italic; }
+  pre .typ, code .typ { color: #404; font-weight: bold; }
+  pre .lit, code .lit { color: #044; }
+  pre .pun, code .pun { color: #444400; }
+  pre .pln, code .pln { color: #000; }
+  pre .tag, code .tag { color: #006; font-weight: bold; }
+  pre .htm, code .htm { color: #606; font-weight: bold; }
+  pre .xsl, code .xsl { color: #606; font-weight: bold; }
+  pre .atn, code .atn { color: #440044;  font-weight: normal; }
+  pre .atv, code .atv { color: #006600;  font-weight: normal; }
+}

@@ -11,7 +11,7 @@ def home(request):
 
 def showpost(request, slugUrl):
 	post = get_object_or_404(Post, slugUrl = slugUrl)
-	posts = Post.objects.all()
+	posts = Post.objects.order_by('-pk')[:4]
 	template = "post.html"
 	return render(request,template,locals())
 

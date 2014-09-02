@@ -19,7 +19,8 @@ header
 	opacity 0.95
 	z-index 2
 pre
-	background gris_mas_claro
+	font-family: 'Oswald', sans-serif;
+
 .name
 	position absolute
 	color white
@@ -79,15 +80,17 @@ pre
 	background #fbfbfb
 	h2
 		text-align center
-		background black
-		color white
+		background #fbfbfb
+		color black
 		padding 0em 1em
 		width 30%
 		margin 0 auto
+		border 1px solid black
 .is-checked
 	background gris_oscuros
 .button-group
 	text-align center
+	margin-top 2em
 .skillContainer
 	margin 0 auto
 	text-align center
@@ -111,18 +114,20 @@ pre
 .blog
 	h2
 		text-align center
-		background black
-		color white
+		background white
+		color black
 		padding 0em 1em
 		width 30%
 		margin 0 auto
 		margin-bottom 1em
+		border 1px solid black
 .postContainer
 	width 100%
 	margin 0 auto
 .post
 	margin-bottom 3em
 	width 33%
+
 .postTitle
 	font-weight bold
 	color gris_oscuro
@@ -135,14 +140,27 @@ pre
 		width 100%
 		height 250px
 .date
+	a
+		position relative
+		top 0.25em
 	span
 		color gris_claro
-		line-height 1.7
+		line-height 1.6
 	p
 		display inline-block
 		float right
-		margin 0 auto
 		color gris_claro
+		font-size 0.9em
+.contacto
+	h2
+		background white
+		margin 0 auto
+		border 1px solid black
+		text-align center
+		width 30%
+
+
+
 
 /*****************Estilos del post ***********************/
 .articulo
@@ -151,7 +169,7 @@ pre
 	width 100%
 	background: rgba(0, 0, 0, 0.7);
 	.imgArt
-		width 50%
+		width 80%
 		margin 0 auto
 		position relative
 .content
@@ -182,7 +200,12 @@ pre
 
 .shareFace
 	width 20%
-
+.shareGplus
+	width 20%
+.shareTw
+	width 20%
+	position relative
+	left -9em
 .blueFace
 	background #3b5999
 .redGPlus
@@ -202,13 +225,42 @@ pre
 	color #60a9de
 .fbComments
 	width 100%
+.lastPost
+	h2
+		border 1px solid black
+		margin 0 auto
+		text-align center
+		width 30%
+
+.postDescription
+	width 70%
+.lastImg
+	width 70%
+	img
+		height 100px
+		width 100%
+.lasts
+	width 25%
+	margin-top 3em
+.lastPostTitle
+	border 1px solid white
 
 @media screen and (max-width:1000px)
 
 	.post
 		width 40%
 		margin-left 3em
+@media screen and (max-width:875px)
 
+	.skill
+		h2
+			width 50%
+	.blog
+		h2
+			width 50%
+	.contacto
+		h2
+			width 50%
 @media screen and (max-width:800px)
 
 	.name
@@ -243,6 +295,7 @@ pre
 
 @media screen and (max-width:500px)
 
+
 	.name
 		display none
 
@@ -261,6 +314,15 @@ pre
 	
 		.imgArt
 			width 90%
+	.skill
+		h2
+			width 90%
+	.blog
+		h2
+			width 90%
+	.contacto
+		h2
+			width 90%
 
 @media screen and (max-width:400px)
 	.desBio
@@ -270,6 +332,8 @@ pre
 			font-size 1em
 		h4
 			font-size 1em
+	pre
+		overflow-x scroll
 
 @media screen and (max-width:360px)
 	
