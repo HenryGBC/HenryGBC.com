@@ -19,6 +19,9 @@ $(function(){
                 type : 'post',
 
              });
+	 		$('#nameInput').val('');
+			$('#emailInput').val('');
+			$('#messageText').val('');
 	 		
 	 });
 

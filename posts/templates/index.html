@@ -7,8 +7,7 @@
 	<link rel="stylesheet" href="{{STATIC_URL}}foundation/css/foundation.css" />
 	<link rel="stylesheet" href="{{STATIC_URL}}css/styles.css">
     <script src="{{STATIC_URL}}foundation/js/vendor/modernizr.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-
+   
     
    <!-- <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>-->
@@ -62,59 +61,19 @@
 		<div id="filters" class="button-group">  
 
 		  <button class="button is-checked" data-filter="*">show all</button>
-		  <button class="button" data-filter=".frontend">Frontend</button>
-		  <button class="button" data-filter=".backend">Backend</button>
-		  <button class="button" data-filter=".mobile">Mobile Dev</button>
-		  <button class="button" data-filter=".others">Others</button>
+		  {% for c in categorias %}
+		  <button class="button" data-filter=".{{c.nombre}}">{{c.nombre}}</button>
+		  {% endfor %}
 		 
 		</div>
 	<div class="row">
 	<div class="skillContainer ">
-		
-		<div class="skill-item small-12 medium-6 large-4 columns frontend" data-category="frontend"  >
-		    <h4 class="skillname"><a href="">JavaScript</a></h4>
-		    <div class="por"><span>60%</span></div>
+		{% for s in skills %}
+		<div class="skill-item small-12 medium-6 large-4 columns {{s.categoria.nombre}}" data-category="{{s.categoria.nombre}}"  >
+		    <h4 class="skillname"><a href="">{{s.skill}}</a></h4>
+		    <div class="por"><span>{{s.porcentaje}}%</span></div>
 		  </div>
-		  <div class="skill-item small-12 medium-6 large-4 columns frontend" data-category="frontend"  >
-		    <h4 class="skillname"><a href="">HTML5</a></h4>
-		    <div class="por"><span>80%</span></div>
-		  </div>
-		  <div class="skill-item small-12 medium-6 large-4 columns frontend" data-category="frontend"  >
-		    <h4 class="skillname"><a href="">CSS3</a></h4>
-		    <div class="por"><span>70%</span></div>
-		  </div>
-		  <div class="skill-item small-12 medium-6 large-4 columns frontend " data-category="frontend"  >
-		    <h4 class="skillname"><a href="">Angular Js</a></h4>
-		    <div class="por"><span>50%</span></div>
-		  </div>
-		   <div class="skill-item small-12 medium-6 large-4 columns frontend" data-category="frontend"  >
-		    <h4 class="skillname"><a href="">Backbone Js</a></h4>
-		    <div class="por"><span>30%</span></div>
-		  </div>
-		  <div class="skill-item small-12 medium-6 large-4 columns backend " data-category="backend" >
-		    <h4 class="skillname"><a href="">Python</a></h4>
-			<div class="por"><span>70%</span></div>
-		  </div>
-		   <div class="skill-item small-12 medium-6 large-4 columns backend" data-category="backend" >
-		    <h4 class="skillname"><a href="">PHP</a></h4>
-			<div class="por"><span>70%</span></div>
-		  </div>
-		  <div class="skill-item small-12 medium-6 large-4 columns backend" data-category="backend" >
-		    <h4 class="skillname"><a href="">Yii</a></h4>
-			<div class="por"><span>70%</span></div>
-		  </div>
-		  <div class="skill-item small-12 medium-6 large-4 columns backend" data-category="backend" >
-		    <h4 class="skillname"><a href="">Django</a></h4>
-			<div class="por"><span>65%</span></div>
-		  </div>
-		  <div class="skill-item small-12 medium-6 large-4 columns backend" data-category="backend" >
-		    <h4 class="skillname"><a href="">NodeJs</a></h4>
-			<div class="por"><span>40%</span></div>
-		  </div>
-		   <div class="skill-item small-12 medium-6 large-4 columns mobile" data-category="mobile" >
-		    <h4 class="skillname"><a href="">PhoneGap</a></h4>
-			<div class="por"><span>60%</span></div>
-		  </div>
+		 {% endfor %} 
 		</div>
 		
 	</div>
