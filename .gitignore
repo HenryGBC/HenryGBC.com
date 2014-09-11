@@ -1,0 +1,3 @@
+*.pyc
+*.pyo
+henrygbc/local_settings.py

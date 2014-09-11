@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '*me-1qujmtsp)piiq^n3&510re#44z4%(1=et=jtah$2s#%%5!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -92,6 +92,7 @@ USE_TZ = True
 #STATIC_ROOT = '/home/henrygbc/HenryGBC.com/henrygbc/static/'
 #STATICFILES_DIRS = '/home/henrygbc/HenryGBC.com/henrygbc/static/'
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home7/cohetico/public_html/henrygbc/static'
 MEDIA_URL = '/media/'
 
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
@@ -103,3 +104,7 @@ SUIT_CONFIG = {
     'ADMIN_NAME': 'HenryGBC Admin'
 }
 
+try:
+  from local_settings import *
+except ImportError:
+  pass
