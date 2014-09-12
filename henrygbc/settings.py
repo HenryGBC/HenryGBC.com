@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*me-1qujmtsp)piiq^n3&510re#44z4%(1=et=jtah$2s#%%5!'
+SECRET_KEY = os.environ['SECRET_henrygbc']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -104,7 +104,18 @@ SUIT_CONFIG = {
     'ADMIN_NAME': 'HenryGBC Admin'
 }
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST=''
+EMAIL_HOST_PASSWORD=''
+EMAIL_HOST_USER=''
+EMAIL_PORT=''
+EMAIL_USE_TLS=True
+
+
 try:
   from local_settings import *
 except ImportError:
   pass
+
+
