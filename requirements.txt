@@ -1,0 +1,6 @@
+Django==1.7
+Pillow==2.5.3
+argparse==1.2.1
+django-suit==0.2.11
+django-summernote==0.5.14
+wsgiref==0.1.2
