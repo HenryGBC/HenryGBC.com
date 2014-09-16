@@ -14,7 +14,7 @@ class Post(models.Model):
 
 
 	def save(self, *args, **kwargs):
-		self.slugUrl = self.title.lower().replace(' ','-')
+		self.slugUrl = self.url.lower().replace(' ','-')
 		super(Post, self).save(*args, **kwargs)
 
 	def __unicode__(self):
