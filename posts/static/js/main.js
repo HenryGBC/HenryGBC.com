@@ -18,14 +18,19 @@ $(function(){
                 url : 'contact/',
                 type : 'post',
 
-             });
+             });	
 	 		$('#nameInput').val('');
 			$('#emailInput').val('');
 			$('#messageText').val('');
+			$('#env').fadeOut();
+			$('#alert').fadeIn();
 	 		
 	 });
 
-	
+	$('#x').on('click', function(event){
+		$('#env').fadeIn();
+		$('#alert').fadeOut();
+	});
 /******************Isotope****************/
 
  var $container = $('.skillContainer').isotope({

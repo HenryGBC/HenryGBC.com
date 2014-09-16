@@ -158,6 +158,34 @@ pre
 		border 1px solid black
 		text-align center
 		width 30%
+.enviar
+	text-align center
+	a
+		width 25%
+		font-weight bold
+
+.alertContact	
+	text-align center
+	background verde_success
+	margin 0 auto
+	padding 1em
+	color white
+	position relative
+	right 25%
+	display none
+#x
+	font-weight bold
+	position absolute
+	top 0.3em
+	right 1%
+	cursor pointer
+	&:hover
+		font-size 1.1em
+
+
+
+
+
 
 
 
@@ -244,7 +272,13 @@ pre
 	margin-top 3em
 .lastPostTitle
 	border 1px solid white
-
+@media screen and (max-width:1021px)
+	.alertContact	
+		width 80%
+		right 10%
+	.contacto
+		h2
+			width 60%
 @media screen and (max-width:1000px)
 
 	.post
@@ -286,6 +320,9 @@ pre
 		div
 			display block
 			margin-top 3em
+	.contacto
+		h2
+			width 60%
 	
 @media screen and (max-width:600px)
 	
@@ -335,6 +372,12 @@ pre
 	pre
 		overflow-x scroll
 
+	.enviar
+		text-align center
+		a
+			width 35%
+			font-weight bold
+
 @media screen and (max-width:360px)
 	
 	.bio
@@ -354,3 +397,8 @@ pre
 	.post
 		width 100%
 		margin-left 0
+	.enviar
+		text-align center
+		a
+			width 35%
+			font-weight bold
