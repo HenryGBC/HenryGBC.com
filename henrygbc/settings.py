@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'usuarios',
     'skills',
     'django_summernote',
+    
 
 
 )

@@ -70,10 +70,10 @@
 					<div class="g-plusone" data-annotation="inline" data-width="100"  data-href="http://henrygbc.com/post/{{p.slugUrl}}"></div>
 					</div>
 				<div class="large-2 columns shareFace">
-					<div class="fb-share-button" data-layout="box_count" data-href="http://henrygbc.com/post/{{p.slugUrl}}"></div>
+				<div class="fb-like" data-href="http://henrygbc.com/post/{{post.slugUrl}}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 				</div>
 					<div class="large-2 columns shareTw">
-					<a href="http://henrygbc.com/post/{{p.slugUrl}}" class="twitter-share-button" data-lang="es" data-size="medium">Tweet</a>
+					<a href="http://henrygbc.com/post/{{post.slugUrl}}" class="twitter-share-button" data-lang="es" data-size="medium">Tweet</a>
 					</div>
 				</div>
 		</div>
@@ -148,14 +148,15 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-    <div id="fb-root"></div>
+   <div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
+	  js.src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	<script src="https://apis.google.com/js/platform.js" async defer>
 	  {lang: 'es'}
