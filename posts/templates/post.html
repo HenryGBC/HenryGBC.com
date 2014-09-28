@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -8,7 +8,9 @@
 	<link rel="stylesheet" href="{{STATIC_URL}}css/styles.css">
     <script src="{{STATIC_URL}}foundation/js/vendor/modernizr.js"></script>
     <link href="{{STATIC_URL}}css/prettify.css" type="text/css" rel="stylesheet" />
-
+	<meta itemprop="name" content="{{post.title}}">
+	<meta itemprop="description" content="{{post.resume}}">
+	<meta itemprop="image" content="http://henrygbc.com/{{post.imagePost}}">
 
     
 
@@ -67,8 +69,8 @@
 	    <div class="share">
 				<div class="row">
 				<div class="large-2 columns shareGplus">
-					<div class="g-plusone" data-annotation="inline" data-width="100"  data-href="http://henrygbc.com/post/{{p.slugUrl}}"></div>
-					</div>
+					<div class="g-plusone" data-annotation="inline" data-width="100"></div>
+				</div>
 				<div class="large-2 columns shareFace">
 				<div class="fb-like" data-href="http://henrygbc.com/post/{{post.slugUrl}}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 				</div>
@@ -158,10 +160,10 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
 	<script src="https://apis.google.com/js/platform.js" async defer>
 	  {lang: 'es'}
 	</script>
 
 </body>
 </html>
-3
